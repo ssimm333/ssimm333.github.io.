@@ -1,0 +1,96 @@
+.liquid-ether-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  overflow: hidden;
+}
+
+.liquid-ether-blob {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(45deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.05) 100%);
+  backdrop-filter: blur(10px);
+  animation: float 20s infinite ease-in-out;
+}
+
+.blob-1 {
+  width: 300px;
+  height: 300px;
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+  animation-duration: 25s;
+}
+
+.blob-2 {
+  width: 200px;
+  height: 200px;
+  top: 60%;
+  right: 20%;
+  animation-delay: -8s;
+  animation-duration: 30s;
+}
+
+.blob-3 {
+  width: 400px;
+  height: 400px;
+  bottom: 10%;
+  left: 20%;
+  animation-delay: -15s;
+  animation-duration: 35s;
+}
+
+.blob-4 {
+  width: 150px;
+  height: 150px;
+  top: 30%;
+  right: 10%;
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) scale(1);
+  }
+  25% {
+    transform: translateY(-50px) translateX(30px) scale(1.1);
+  }
+  50% {
+    transform: translateY(-100px) translateX(-20px) scale(0.9);
+  }
+  75% {
+    transform: translateY(-30px) translateX(-50px) scale(1.05);
+  }
+}
+
+/* Add some glow effects */
+.liquid-ether-blob::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: pulse 8s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.2);
+  }
+}
