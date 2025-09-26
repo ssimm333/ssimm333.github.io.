@@ -9,7 +9,11 @@
       "WebFetch(domain:reactbits.dev)",
       "WebFetch(domain:github.com)",
       "Bash(npx jsrepo add:*)",
-      "Bash(npm run dev:*)"
+      "Bash(npm run dev:*)",
+      "Bash(npm run build:*)",
+      "Bash(git add:*)",
+      "Bash(git push:*)",
+      "Bash(npm run deploy:*)"
     ],
     "deny": [],
     "ask": []
